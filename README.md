@@ -114,10 +114,8 @@ ou arredondando 66.67%
 
 ##  Gráfico de Consumo
 
-
-```markdown
 ![Gráfico de Consumo](grafico.png)
-```
+
 
 ---
 
