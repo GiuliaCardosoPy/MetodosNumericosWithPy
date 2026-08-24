@@ -114,7 +114,6 @@ ou arredondando 66.67%
 
 ##  Gráfico de Consumo
 
-> Para exibir o gráfico no README, salve a imagem com `plt.savefig("grafico.png")` no seu código.
 
 ```markdown
 ![Gráfico de Consumo](grafico.png)
