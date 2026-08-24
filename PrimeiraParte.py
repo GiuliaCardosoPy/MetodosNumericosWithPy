@@ -35,11 +35,11 @@ print (Fore.GREEN+ f"\nO consumo total da semana foi de \n{consumo_total} kWh" +
 #3. Calcule o consumo médio diário
 
 for dia in consumo:
-    media = consumo_total / 7
+    media = consumo_total / len(consumo)
 
 separador()
 print("3. Calcule o consumo médio diário") 
-print(Fore.GREEN + f"\nA média do consumo diário é {media} \nkWh por dia (valor truncado {media:.2f})" + Style.RESET_ALL)
+print(Fore.GREEN + f"\nA média do consumo diário é {media} \nkWh por dia (valor aproximado {media:.2f})" + Style.RESET_ALL)
 
 #resposta: consumo diário de 19.57kWH
 
