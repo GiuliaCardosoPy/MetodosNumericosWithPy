@@ -45,32 +45,22 @@ print(Fore.GREEN + f"\nA média do consumo diário é {media} \nkWh por dia (val
 
 
 #4. Identifique o maior consumo e em qual dia ocorreu
-maior_consumo = 0
-dia_da_semana = " "
-for dia in consumo:
-    valor = consumo[dia]
-    if valor > maior_consumo:
-        maior_consumo = valor
-        dia_da_semana = dia
+
+
+maior_consumo = max(consumo, key=consumo.get)
 
 separador()
 print("4. Identifique o maior consumo e em qual \ndia ocorreu") 
-print(Fore.GREEN + f"\nO maior consumo foi  {dia_da_semana} \ncom {maior_consumo} kWh" + Style.RESET_ALL)
+print(Fore.GREEN + f"\nO maior consumo foi {maior_consumo} \ncom {consumo[maior_consumo]} kWh" + Style.RESET_ALL)
 #resposta: 30 kWh e sexta
 
 #5. Identifique o menor consumo e em qual dia ocorreu
-menor_consumo = 100
-dia_da_semana = " "
+menor_consumo = min(consumo, key=consumo.get)
 
-for dia in consumo:
-    valor = consumo[dia]
-    if valor < menor_consumo:
-        menor_consumo = valor
-        dia_da_semana = dia
 
 separador()
 print("5. Identifique o menor consumo e em qual \ndia ocorreu") 
-print(Fore.GREEN + f"\nO menor consumo foi {dia_da_semana} \ncom {menor_consumo} kWh" + Style.RESET_ALL)
+print(Fore.GREEN + f"\nO menor consumo foi {menor_consumo} \ncom {consumo[menor_consumo]} kWh" + Style.RESET_ALL)
 
 #resposta: domingo com 10 kWh
 
@@ -91,9 +81,9 @@ print(Fore.GREEN + f"Os dias foram {nome_dias} \ne os valores {dias_acima_media}
 #7. Calcule a orcentagem de redução do consumo no domingo em relação ao dia de maior consumo
 consumo_domingo = consumo["domingo"]
 
-erro_absoluto = maior_consumo - consumo_domingo
+erro_absoluto = consumo[maior_consumo] - consumo_domingo
 
-erro_relativo = erro_absoluto / maior_consumo
+erro_relativo = erro_absoluto / consumo[maior_consumo]
 
 erro_percentual = erro_relativo * 100
 
@@ -104,5 +94,3 @@ print("7. Calcule a orcentagem de redução do consumo no \ndomingo em relação
 print(Fore.GREEN + f"\nO percentual de redução foi de {erro_percentual}% \nou arredondando {arredondar_erro}%\n" + Style.RESET_ALL)
 
 #resposta: 66.6666% ou 66.67%
-
-
