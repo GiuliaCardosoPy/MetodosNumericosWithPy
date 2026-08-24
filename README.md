@@ -167,7 +167,7 @@ python SegundaParte.py
 
 ##  Autora
 
-Projeto desenvolvido por **Giulia Cardoso** como parte de atividade acadêmica.
+Projeto desenvolvido by **Giulia Cardoso**
 
 ---
 
