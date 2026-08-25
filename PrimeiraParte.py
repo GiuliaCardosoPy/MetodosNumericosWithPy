@@ -78,7 +78,7 @@ print("6.Determine quais dias tiveram consumo acima \nda média")
 print(f"\nA média foi de {media:.2f}")
 print(Fore.GREEN + f"Os dias foram {nome_dias} \ne os valores {dias_acima_media}" + Style.RESET_ALL) 
 
-#7. Calcule a orcentagem de redução do consumo no domingo em relação ao dia de maior consumo
+#7. Calcule a porcentagem de redução do consumo no domingo em relação ao dia de maior consumo
 consumo_domingo = consumo["domingo"]
 
 erro_absoluto = consumo[maior_consumo] - consumo_domingo
@@ -90,7 +90,7 @@ erro_percentual = erro_relativo * 100
 arredondar_erro = round(erro_percentual, 2)
 
 separador()
-print("7. Calcule a orcentagem de redução do consumo no \ndomingo em relação ao dia de maior consumo" + Style.RESET_ALL)
+print("7. Calcule a porcentagem de redução do consumo no \ndomingo em relação ao dia de maior consumo" + Style.RESET_ALL)
 print(Fore.GREEN + f"\nO percentual de redução foi de {erro_percentual}% \nou arredondando {arredondar_erro}%\n" + Style.RESET_ALL)
 
 #resposta: 66.6666% ou 66.67%
